@@ -2,15 +2,6 @@ body {
     background-color: rgba(220, 220, 220, 0.742);
 }
 
-
-/* a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-} */
-
 .head_main {
     background-color: green;
 }
@@ -45,6 +36,16 @@ ul {
 
 .menu_item {
     color: white;
+}
+
+.menu_icon {
+    order: 1;
+}
+
+@media(max-width:991px) {
+    .menu_icon {
+        order: 0;
+    }
 }
 
 .menu_link:hover {
