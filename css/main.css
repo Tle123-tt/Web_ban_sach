@@ -70,6 +70,15 @@ ul {
 .post {
     width: 230px;
     position: relative;
+    border-radius: 0;
+    overflow: clip;
+}
+
+.post_img {
+    width: 230px;
+    height: auto;
+    aspect-ratio: 2/3;
+    border-radius: 0;
 }
 
 .post_btn {
@@ -80,6 +89,18 @@ ul {
 
 .post_btn:hover {
     background-color: red;
+    color: white;
+}
+
+.bton_1 {
+    background-color: green;
+    color: white;
+    width: 180px;
+    height: 54px;
+}
+
+.bton_1:hover {
+    background-color: green;
     color: white;
 }
 
@@ -95,7 +116,7 @@ ul {
 }
 
 .post:hover .overflay {
-    height: 20%;
+    height: 22%;
 }
 
 
