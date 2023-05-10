@@ -77,6 +77,10 @@ a {
     height: 210px;
 }
 
+.form span {
+    position: absolute;
+}
+
 .btn-close {
     position: absolute;
     right: 0;
@@ -95,6 +99,8 @@ a {
     background-color: green;
     color: white;
 }
+
+.search_group {}
 
 .title_main {
     background-color: green;
@@ -152,6 +158,12 @@ a {
     position: relative;
     border-radius: 0;
     overflow: clip;
+    background-color: rgba(220, 220, 220, 0.742);
+}
+
+.gia_sp {
+    font-size: 21px;
+    margin: 6.5%;
 }
 
 .post_img {
@@ -162,13 +174,15 @@ a {
 }
 
 .post_btn {
-    background-color: red;
+    background-color: green;
     color: white;
     width: 200px;
+    margin: 1.2% 6.5% 0 6.5%;
+    border-radius: 0;
 }
 
 .post_btn:hover {
-    background-color: red;
+    background-color: green;
     color: white;
 }
 
@@ -197,7 +211,7 @@ a {
     background-color: white;
     overflow: hidden;
     height: 0;
-    transition: 0.7s ease;
+    transition: 0.1s ease;
 }
 
 .pa_item_link {
@@ -221,7 +235,7 @@ a {
 }
 
 .post:hover .overflay {
-    height: 22%;
+    height: 70%;
 }
 
 .footer_main {
