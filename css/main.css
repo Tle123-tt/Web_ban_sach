@@ -87,15 +87,24 @@ a {
     color: white;
 }
 
+.ghang_body {
+    background-color: rgb(182, 182, 182);
+}
+
 .ghang_item_table_sanpham {
     font-size: 21px;
     font-weight: 600;
+}
+
+th {
+    font-size: 22px;
 }
 
 .ghang_item_table_gia {}
 
 .ghang_item_table_image {
     width: 80px;
+    border-radius: 3.7px;
 }
 
 .btn_xoa {
