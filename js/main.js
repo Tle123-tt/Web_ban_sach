@@ -1,21 +1,47 @@
-var removeItemButton = document.getElementsByClassName('btn_xoa');
-console.log(removeItemButton);
-for (var i = 0; i < removeItemButton.length; i++) {
-    var button = removeItemButton[i];
-    button.addEventListener('click', function(event) {
-        var buttonClicked = event.target;
-        buttonClicked.parentElement.remove();
-        updateCartTotal();
-    })
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready();
+}
+
+function ready() {
+    var removeCartItemButtons = document.getElementsByClassName('btn_xoa');
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i];
+        button.addEventListener('click', removeCartItem);
+    }
+    var quanityInputs = document.getElementsByClassName('number_slg');
+    for (var i = 0; i < quanityInputs.length; i++) {
+        var input = quanityInputs[i];
+        input.addEventListener('change', quanityChanged);
+    }
+}
+
+function removeCartItem(event) {
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.parentElement.remove();
+    updateCartTotal();
+}
+
+function quanityChanged(event) {
+    var input = event.target;
+    if (isNaN(input.vaule) || input.vaule <= 0) {
+        input.vaule = 1;
+    }
+    updateCartTotal();
 }
 
 function updateCartTotal() {
-    var carItemContainer = document.getElementsByClassName('ghang_item_table_sanpham')[0]
-    var cartRows = carItemContainer.getElementsByClassName('ghang_item')
+    var carItemContainer = document.getElementsByClassName('ghang_rows')[0];
+    var cartRows = carItemContainer.getElementsByClassName('ghang_item');
+    var total = 0;
     for (var i = 0; i < cartRows.length; i++) {
-        var cartRows = cartRows[i]
-        var priceElement = cartRows.getElementsByClassName('ghang_item_table_gia')[0]
-        var quantityElement = cartRows.getElementsByClassName('number_slg')[0]
-        console.log(priceElement, quantityElement)
+        var cartRow = cartRows[i];
+        var priceElement = cartRow.getElementsByClassName('ghang_item_table_gia')[0];
+        var quantityElement = cartRow.getElementsByClassName('number_slg')[0];
+        var price = parseFloat(priceElement.innerText.replace('', 'đ'));
+        var quanity = quantityElement.vaule;
+        total = total + (price * quanity);
     }
+    document.getElementsByClassName('tong_tien_dvi')[0].innerHTML = total + 'đ';
 }

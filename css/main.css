@@ -82,6 +82,10 @@ a {
     height: 210px;
 }
 
+.search_item {
+    width: 600px;
+}
+
 .ghang_header {
     background-color: green;
     color: white;
@@ -120,6 +124,12 @@ th {
     width: 50px;
 }
 
+.tong_tien {
+    font-size: 22px;
+    margin-right: 180px;
+    left: 0;
+}
+
 .form span {
     position: absolute;
 }
@@ -143,7 +153,14 @@ th {
     color: white;
 }
 
-.search_group {}
+.btn_search {
+    width: 83px;
+    border-radius: 20px;
+}
+
+.text_search {
+    border-radius: 20px;
+}
 
 .title_main {
     background-color: green;
@@ -231,6 +248,19 @@ th {
     color: white;
 }
 
+.post_btn_cart {
+    background-color: green;
+    color: white;
+    width: 200px;
+    margin: 1.2% 6.5% 0 6.5%;
+    border-radius: 0;
+}
+
+.post_btn_cart:hover {
+    background-color: green;
+    color: white;
+}
+
 .bton_1 {
     background-color: green;
     color: white;
@@ -285,5 +315,21 @@ th {
 
 .footer_main {
     background-color: black;
-    height: 245px;
+    /* height: 245px; */
+}
+
+.footer_link {
+    color: white;
+}
+
+.footer_link:hover {
+    color: green;
+}
+
+.footer_logo_item {
+    color: white;
+}
+
+.footer_logo_item:hover {
+    color: white;
 }

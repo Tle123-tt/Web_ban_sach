@@ -78,10 +78,11 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content  tkiem_item_s">
                 <div class="modal-body">
+                    <button type="button " class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h3 class="modal-title text-center tkiem_item_title mb-3 ">Tìm kiếm</h3>
                     <div class="container">
                         <div class="row">
-                            <div class="col"><button type="button " class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                                <h3 class="modal-title text-center tkiem_item_title mb-3 ">Tìm kiếm</h3>
+                            <div class="col">
                                 <form action="" class="search_group d-flex position-relative mt-4">
                                     <input class="form-control position-absolute top-50 end-0 text_search me-1" type="search" placeholder="Search" aria-label="Search">
                                     <button class="btn btn_search position-absolute top-50 end-0 btn-success" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
@@ -89,11 +90,11 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+    <!-- <div class="search_item" id="Timkiem"></div> -->
     <div class="ndung_item modal" id="User">
         <div class="modal-dialog">
             <div class="modal-content  ndung_item_s">
@@ -135,14 +136,14 @@
                 </div>
                 <div class="modal-body ghang_body">
                     <table class="table">
-                        <thead>
-                            <tr>
+                        <thead class="ghang_head">
+                            <tr class="ghang_danhmuc">
                                 <th>Mặt hàng</th>
                                 <th>Giá</th>
                                 <th>Số luợng</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="ghang_rows">
                             <tr class="ghang_item">
                                 <td class="ghang_item_table_sanpham">
                                     <img src="./pic/3GX3U5U3.jpg" alt="" class="ms-3 ghang_item_table_image"> Thảm kịch vĩ nhân
@@ -150,7 +151,7 @@
                                 <td class="ghang_item_table_gia pt-5">150.000đ</td>
                                 <td class="ghang_item_table_soluong pt-5">
                                     <div class="input-group ghang_item_table_slg_group">
-                                        <input type="number" max="10" min="1" class="number_slg">
+                                        <input type="number" max="10" min="1" class="number_slg" value="1">
                                         <button type="button" class=" btn_xoa">Xóa</i></button>
                                     </div>
                                 </td>
@@ -162,7 +163,7 @@
                                 <td class="ghang_item_table_gia pt-5">150.000đ</td>
                                 <td class="ghang_item_table_soluong pt-5">
                                     <div class="input-group ghang_item_table_slg_group">
-                                        <input type="number" max="10" min="1" class="number_slg">
+                                        <input type="number" max="10" min="1" class="number_slg" value="1">
                                         <button type="button" class=" btn_xoa">Xóa</i></button>
                                     </div>
                                 </td>
@@ -174,7 +175,7 @@
                                 <td class="ghang_item_table_gia pt-5">150.000đ</td>
                                 <td class="ghang_item_table_soluong pt-5">
                                     <div class="input-group ghang_item_table_slg_group">
-                                        <input type="number" max="10" min="1" class="number_slg">
+                                        <input type="number" max="10" min="1" class="number_slg" value="1">
                                         <button type="button" class="btn_xoa">Xóa</i></button>
                                     </div>
                                 </td>
@@ -186,12 +187,22 @@
                                 <td class="ghang_item_table_gia pt-5">150.000đ</td>
                                 <td class="ghang_item_table_soluong pt-5">
                                     <div class="input-group ghang_item_table_slg_group">
-                                        <input type="number" max="10" min="1" class="number_slg">
+                                        <input type="number" max="10" min="1" class="number_slg" value="1">
                                         <button type="button" class=" btn_xoa">Xóa</i></button>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
+                        <tfoot class="ghang_total">
+                            <tr class="">
+                                <td colspan="4">
+                                    <div class=" tong_tien d-flex  ">
+                                        <span class="tong_tien_title">Giá:</span>
+                                        <span class="tong_tien_dvi">600000đ</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
             </div>
@@ -221,7 +232,7 @@
                                 <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button" class="btn post_btn_cart">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -237,15 +248,15 @@
                 <div class="card post ">
                     <img src="./pic/FVGQXPMS.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -258,15 +269,15 @@
                 <div class="card post ">
                     <img src="./pic/KL46JGR9.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -279,15 +290,15 @@
                 <div class="card post ">
                     <img src="./pic/O98SX8FO.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -300,15 +311,15 @@
                 <div class="card post ">
                     <img src="./pic/PG2C4TUE.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -321,15 +332,15 @@
                 <div class="card post ">
                     <img src="./pic/VHWU7QAW.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -342,15 +353,15 @@
                 <div class="card post ">
                     <img src="./pic/ZPZ6G6CP.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -363,15 +374,15 @@
                 <div class="card post ">
                     <img src="./pic/G2J1GHMQ.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -385,13 +396,13 @@
 
     <div class="container mb-5 d-flex justify-content-center ">
         <button class="btn bton_1 ">
-            <a href="./smxb.html" class="bton_1_link">Xem thêm</a>
+            <a href="./smxb.html " class="bton_1_link ">Xem thêm</a>
         </button>
     </div>
 
     <div class="title_main container mb-4 ">
-        <div class="row">
-            <div class="col">
+        <div class="row ">
+            <div class="col ">
                 <div class="title ">
                     Sách bán chạy
                 </div>
@@ -405,15 +416,15 @@
                 <div class="card post ">
                     <img src="./pic/QZJB7DKY.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -426,15 +437,15 @@
                 <div class="card post ">
                     <img src="./pic/TGGOCQQQ.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -447,15 +458,15 @@
                 <div class="card post ">
                     <img src="./pic/HDEA67JF.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -469,15 +480,15 @@
                 <div class="card post ">
                     <img src="./pic/MBDS34VI.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -490,15 +501,15 @@
                 <div class="card post ">
                     <img src="./pic/V5VL3E5N.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -511,15 +522,15 @@
                 <div class="card post ">
                     <img src="./pic/K86N2QWU.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -532,15 +543,15 @@
                 <div class="card post ">
                     <img src="./pic/HTZ5DBZ1.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -553,15 +564,15 @@
                 <div class="card post ">
                     <img src="./pic/5BK3HGO4.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -575,13 +586,13 @@
 
     <div class="container mb-5 d-flex justify-content-center ">
         <button class="btn bton_1 ">
-            <a href="./sbc.html" class="bton_1_link">Xem thêm</a>
+            <a href="./sbc.html " class="bton_1_link ">Xem thêm</a>
         </button>
     </div>
 
     <div class="title_main container mb-4 ">
-        <div class="row">
-            <div class="col">
+        <div class="row ">
+            <div class="col ">
                 <div class="title ">
                     Văn học Việt Nam
                 </div>
@@ -595,15 +606,15 @@
                 <div class="card post ">
                     <img src="./pic/DGDZBYGY.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -616,15 +627,15 @@
                 <div class="card post ">
                     <img src="./pic/V3WXDZK3.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -637,15 +648,15 @@
                 <div class="card post ">
                     <img src="./pic/9YLI42GM.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -658,15 +669,15 @@
                 <div class="card post ">
                     <img src="./pic/DKQYFA75.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -679,15 +690,15 @@
                 <div class="card post ">
                     <img src="./pic/2QAYBLJW.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -700,15 +711,15 @@
                 <div class="card post ">
                     <img src="./pic/C5FA2DHX.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -721,15 +732,15 @@
                 <div class="card post ">
                     <img src="./pic/3GX3U5U3.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -742,15 +753,15 @@
                 <div class="card post ">
                     <img src="./pic/25TXXGOL.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -764,13 +775,13 @@
 
     <div class="container mb-5 d-flex justify-content-center ">
         <button class="btn bton_1 ">
-            <a href="./vhvn.html" class="bton_1_link">Xem thêm</a>
+            <a href="./vhvn.html " class="bton_1_link ">Xem thêm</a>
         </button>
     </div>
 
     <div class="title_main container mb-4 ">
-        <div class="row">
-            <div class="col">
+        <div class="row ">
+            <div class="col ">
                 <div class="title ">
                     Văn học nước ngoài
                 </div>
@@ -784,15 +795,15 @@
                 <div class="card post ">
                     <img src="./pic/CW8L4E73.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -805,15 +816,15 @@
                 <div class="card post ">
                     <img src="./pic/PP15XG7Q.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -826,15 +837,15 @@
                 <div class="card post ">
                     <img src="./pic/O3F5O5FJ.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -847,15 +858,15 @@
                 <div class="card post ">
                     <img src="./pic/RCN7X24K.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -868,15 +879,15 @@
                 <div class="card post ">
                     <img src="./pic/KL46JGR9.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -889,15 +900,15 @@
                 <div class="card post ">
                     <img src="./pic/O98SX8FO.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -910,15 +921,15 @@
                 <div class="card post ">
                     <img src="./pic/V5VL3E5N.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -931,15 +942,15 @@
                 <div class="card post ">
                     <img src="./pic/IOISKFAC.jpg " alt=" " class="card-img post_img ">
                     <div class="overflay ">
-                        <p class="gia_sp">Giá: 150.000đ</p>
-                        <div class="ttin_sp">
-                            <ul class="ttin_sp_list">
-                                <li class="ttin_sp_list_item">Số trang:n</li>
-                                <li class="ttin_sp_list_item">Kích thước:n</li>
-                                <li class="ttin_sp_list_item">Ngày phát hành:n/n/2023</li>
+                        <p class="gia_sp ">Giá: 150.000đ</p>
+                        <div class="ttin_sp ">
+                            <ul class="ttin_sp_list ">
+                                <li class="ttin_sp_list_item ">Số trang:n</li>
+                                <li class="ttin_sp_list_item ">Kích thước:n</li>
+                                <li class="ttin_sp_list_item ">Ngày phát hành:n/n/2023</li>
                             </ul>
                         </div>
-                        <button type="button " class="btn post_btn  ">
+                        <button type="button " class="btn post_btn_cart ">
                             Đặt mua
                         </button>
                         <button type="button " class="btn post_btn ">
@@ -953,51 +964,51 @@
 
     <div class="container mb-5 d-flex justify-content-center ">
         <button class="btn bton_1 ">
-           <a href="./vhnn.html" class="bton_1_link">Xem thêm</a>
+           <a href="./vhnn.html " class="bton_1_link ">Xem thêm</a>
         </button>
     </div>
 
     <footer class="footer_main ">
-        <div class="container p-3">
-            <div class="row">
-                <div class="col mt-4">
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="">Giới thiệu</a>
+        <div class="container p-3 d-flex justify-content-center ">
+            <div class="row ">
+                <div class="col mt-4 ">
+                    <ul class="list-unstyled ">
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Giới thiệu</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="">Liên hệ</a>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Liên hệ</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="">Thông báo</a>
-                        </li class="mb-2">
-                        <li class="mb-2">
-                            <a href="">Chính sách vận chuyển</a>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Thông báo</a>
+                        </li>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Chính sách vận chuyển</a>
                         </li>
                     </ul>
 
                 </div>
-                <div class="col mt-4">
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="">Chính sách bảo mật</a>
-                        </li class="mb-2">
-                        <li class="mb-2">
-                            <a href="">Hướng dẫn mua hàng</a>
+                <div class="col mt-4 ">
+                    <ul class="list-unstyled ">
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Chính sách bảo mật</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="">Chính sách bảo mật</a>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Hướng dẫn mua hàng</a>
                         </li>
-                        <li class="mb-2">
-                            <a href="">Quy định đổi trả và hủy đơn hàng</a>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Chính sách bảo mật</a>
+                        </li>
+                        <li class="mb-2 ">
+                            <a href=" " class="footer_link ">Quy định đổi trả và hủy đơn hàng</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col mt-4">
-                    <a href="" class="me-3"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="" class="me-3"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="me-3"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="" class="me-3"><i class="fa-brands fa-tiktok"></i></a>
+                <div class="col mt-4 mb-4 ">
+                    <a href=" " class="me-3 footer_logo_item "><i class="fa-brands fa-facebook "></i></a>
+                    <a href=" " class="me-3 footer_logo_item "><i class="fa-brands fa-instagram "></i></a>
+                    <a href=" " class="me-3 footer_logo_item "><i class="fa-brands fa-youtube "></i></a>
+                    <a href=" " class="me-3 footer_logo_item "><i class="fa-brands fa-tiktok "></i></a>
                 </div>
             </div>
         </div>
